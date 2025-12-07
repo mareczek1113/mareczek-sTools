@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mareczek's Tools</title>
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<style>
+  body {
+    margin: 0;
+    font-family: 'Share Tech Mono', monospace;
+    background: #0d0d0d;
+    color: #00ff00;
+  }
+
+  header {
+    background: #0f0f0f;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #00ff00;
+  }
+
+  header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: #00ff00;
+    text-shadow: 0 0 10px #00ff00;
+  }
+
+  .container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+
+  .card {
+    background: #111;
+    border: 2px solid #00ff00;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 15px #00ff0050;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 0.3s all;
+  }
+
+  .card:hover {
+    box-shadow: 0 0 30px #00ff00;
+    transform: translateY(-5px);
+  }
+
+  .card h2 {
+    margin-top: 0;
+    color: #00ff00;
+    text-shadow: 0 0 5px #00ff00;
+  }
+
+  .card p {
+    flex-grow: 1;
+    margin: 10px 0;
+  }
+
+  .card button {
+    background: #0d0d0d;
+    border: 2px solid #00ff00;
+    color: #00ff00;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Share Tech Mono', monospace;
+    transition: 0.2s all;
+    text-shadow: 0 0 5px #00ff00;
+  }
+
+  .card button:hover {
+    background: #00ff00;
+    color: #0d0d0d;
+    box-shadow: 0 0 15px #00ff00;
+  }
+
+  footer {
+    text-align: center;
+    padding: 20px;
+    background: #0f0f0f;
+    margin-top: 50px;
+    border-top: 2px solid #00ff00;
+    color: #00ff00;
+    text-shadow: 0 0 5px #00ff00;
+  }
+
+  @media (max-width: 600px) {
+    header h1 {
+      font-size: 2rem;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Mareczek's Tools</h1>
+</header>
+
+<div class="container">
+  <div class="card">
+    <h2>Autoclicker 1.0</h2>
+    <p>A simple but fast autoclicker made in Python</p>
+    <button onclick="download('autoclick.exe')">Download</button>
+  </div>
+
+  <div class="card">
+    <h2>CPS Counter</h2>
+    <p>Counts your clicks per second</p>
+    <button onclick="download('cps.exe')">Download</button>
+  </div>
+
+  <div class="card">
+    <h2>ASCII Generator</h2>
+    <p>Convert your images to ASCII</p>
+    <button onclick="download('ascii.exe')">Download</button>
+  </div>
+
+  <!-- New Skid-style extra downloads card -->
+  <div class="card">
+    <h2>More soon...</h2>
+    <p>More tools are always being added</p>
+  </div>
+</div>
+
+<footer>
+  &copy; 2025 Mareczek. All rights reserved.
+</footer>
+
+<script>
+  function download(fileName) {
+    alert('Starting download for: ' + fileName);
+    window.location.href = fileName; 
+  }
+</script>
+
+</body>
+</html>
